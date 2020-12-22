@@ -23,12 +23,14 @@ public class Server {
             }
             Arrays.sort(arr);
             clientWriteSource.writeUTF("your data in ascending order");
+            System.out.println("your data in ascending order");
             for (int i = 0; i < 10; i++) {
                 clientWriteSource.writeInt(arr[ i ]);
                 System.out.println("element number " + (i + 1) + "  is " + arr[ i ]);
             }
 
             clientWriteSource.writeUTF("your data in descending order");
+            System.out.println("your data in descending order");
             for (int i = 9; i >= 0; i--) {
                 clientWriteSource.writeInt(arr[ i ]);
                 System.out.println("element number " + (10-i) + "  is " + arr[ i ]);
